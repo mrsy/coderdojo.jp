@@ -25,6 +25,16 @@ CoderDojo としての活動は継続させつつ、代表者を交代するこ�
    - A. 新代表者のメールアドレスを入力し、「主宰」として招待
    - B. 旧代表者のアイコンをクリックし、「Change Role」または「削除」を実行
 
+## 3. coderdojo.jp で Dojo を非表示にする
+
+下記の手順で [coderdojo.jp](https://coderdojo.jp/) に掲載されている Dojo を非表示にすることができます。
+
+1. [db/dojos.yaml](https://github.com/coderdojo-japan/coderdojo.jp/blob/master/db/dojos.yaml) を開く
+2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
+3. 自身の Dojo に `is_active: false` の行を追加し、Propose file change をクリックする ([修正例](https://github.com/coderdojo-japan/coderdojo.jp/commit/32de1881a2b47d1faa91f99b2f5acc3f07a490b7))
+4. 修正内容を確認し、問題なければ Create pull request をクリックする
+
+
 以上の手続きで代表者を交代することができます。代表者が交代できたら、WebサイトまたはSNSなどで関係者に周知しておくとスムーズに情報を伝えることができます。
 
 ## 例: CoderDojo 沖縄の場合
