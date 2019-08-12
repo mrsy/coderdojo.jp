@@ -14,6 +14,7 @@ class SoundCloudTrack < ApplicationRecord
   validates :permalink,             presence: false
   validates :permalink_url,         presence: false
   validates :uploaded_at,           presence: false
+  validate  :published_date
 
   # instance methods
   def path
@@ -27,10 +28,6 @@ class SoundCloudTrack < ApplicationRecord
   def exists?(offset: 0)
     return false if path.include?("\u0000")
     File.exists?("#{DIR_PATH}/#{id + offset}.md")
-  end
-
-  def published_at
-    exists? ? Time.parse(content.lines.second.gsub(/<.+?>/, '').delete('収録日: ')) : nil
   end
 
   def content
