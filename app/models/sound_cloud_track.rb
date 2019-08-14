@@ -6,15 +6,12 @@ class SoundCloudTrack < ApplicationRecord
 
   validates :track_id,              presence: false, uniqueness: true
   validates :title,                 presence: false
-  validate  :description
   validates :original_content_size, presence: false
   validates :duration,              presence: false
-  validate  :tag_list
   validates :download_url,          presence: false
   validates :permalink,             presence: false
   validates :permalink_url,         presence: false
   validates :uploaded_at,           presence: false
-  validate  :published_date
 
   # instance methods
   def path
